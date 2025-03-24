@@ -1,0 +1,12 @@
+.navbar {
+    font-size: 1.1rem;
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #ff9800; /* Orange Highlight */
+  }
+  
