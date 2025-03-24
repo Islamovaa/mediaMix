@@ -1,0 +1,136 @@
+
+<main class="main-container">
+    <div class="content-wrapper">
+  
+      <!-- Kategorien -->
+      <ul class="category-list">
+        <li class="category-item">Alle</li>
+        <li class="category-item buch">Bücher</li>
+        <li class="category-item film">Filme</li>
+        <li class="category-item ps-spiel">PS-Spiele</li>
+        <li class="category-item gesellschaftsspiel">Gesellschaftsspiele</li>
+      </ul>
+  
+      <!-- Hauptinhalt -->
+      <section class="media-section">
+        <div class="media-container">
+          <h2>Deine Medien</h2>
+  
+          <div class="action-buttons">
+            <button class="btn btn-warning"> Zufallsgenerator</button>
+            <button class="btn btn-primary" (click)="openModal()">Neues Medium hinzufügen</button>
+          </div>
+  
+          <!-- Medienliste -->
+          <div class="media-list">
+            <div class="media-card" *ngFor="let medium of mediaList" [ngClass]="getCategoryClass(medium.category)">
+              <div class="media-card-actions">
+                <button class="edit-button" (click)="editMedium(medium)">
+                  <i class="bi bi-pencil-square"></i>
+                </button>
+                <button class="delete-button" (click)="deleteMedium(medium._id)">
+                  <i class="bi bi-trash"></i>
+                </button>
+              </div>
+  
+              <h6 class="media-card-title">{{ medium.title }}</h6>
+              <p class="media-card-type">{{ medium.category }}</p>
+  
+              <ng-container *ngFor="let key of getKeys(medium)">
+                <p *ngIf="!['title', 'category', '_id', '__v', 'createdAt', 'updatedAt', 'dynamicFields', 'additionalfields'].includes(key)">
+                  <strong>{{ key | titlecase }}:</strong> {{ medium[key] }}
+                </p>
+              </ng-container>              
+              
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+
+    <!-- MODAL: Neues Medium hinzufügen -->
+<div class="modal-backdrop" *ngIf="showModal"></div>
+
+<div class="modal" *ngIf="showModal">
+  <div class="add-medium-modal">
+    <h2>Neues Medium hinzufügen</h2>
+
+    <form (ngSubmit)="onSubmit()" class="modal-form">
+      <!-- Titel -->
+      <div class="form-group">
+        <label for="title">Titel:</label>
+        <input type="text" id="title" [(ngModel)]="newMedium.title" name="title" required />
+      </div>
+
+      <!-- Kategorie -->
+      <div class="form-group">
+        <label for="category">Kategorie:</label>
+        <select id="category" [(ngModel)]="newMedium.category" name="category" required>
+          <option value="">Bitte wählen</option>
+          <option value="Buch">Buch</option>
+          <option value="Film">Film</option>
+          <option value="PS-Spiel">PS-Spiel</option>
+          <option value="Gesellschaftsspiel">Gesellschaftsspiel</option>
+        </select>
+      </div>
+
+      
+      <!-- Dynamische zusätzliche Felder -->
+<div *ngFor="let field of customFields" class="form-group">
+    <label>Eigenschaft:</label>
+    <input type="text" [(ngModel)]="field.key" placeholder="z. B. Genre" [ngModelOptions]="{ standalone: true }" />
+  
+    <label>Wert:</label>
+    <input type="text" [(ngModel)]="field.value" placeholder="z. B. Krimi" [ngModelOptions]="{ standalone: true }" />
+  </div>
+
+  <button type="button" (click)="addCustomField()">+ Feld hinzufügen</button>
+
+  
+      <div class="form-group">
+        <label>Status:</label><br>
+      
+        <label>
+          <input 
+            type="radio" 
+            name="status"
+            [checked]="newMedium.status === 'offen'"
+            (change)="toggleStatus('offen')" />
+          Offen
+        </label>
+      
+        <label>
+          <input 
+            type="radio" 
+            name="status"
+            [checked]="newMedium.status === 'erledigt'"
+            (change)="toggleStatus('erledigt')" />
+         erledigt
+        </label>
+      </div>
+      
+   
+      <div *ngIf="newMedium.status === 'erledigt'">
+        <div class="form-group">
+          <label for="rating">Bewertung:</label>
+          <input type="number" id="rating" name="rating" [(ngModel)]="newMedium.rating" min="1" max="5" />
+        </div>
+      
+        <div class="form-group">
+          <label for="comment">Kommentar:</label>
+          <textarea id="comment" name="comment" [(ngModel)]="newMedium.comment"></textarea>
+        </div>
+      </div>
+      
+
+ 
+      <div class="modal-actions">
+        <button type="submit">Speichern</button>
+        <button type="button" (click)="closeModal()">Abbrechen</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+</main>

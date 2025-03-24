@@ -1,0 +1,19 @@
+.header-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #ddd;
+  }
+  
+  .header-logo img {
+    height: 50px;
+  }
+  
+  .header-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+
+  

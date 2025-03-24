@@ -1,0 +1,45 @@
+
+# Backend
+node_modules/
+backend/node_modules/
+backend/dist/
+backend/.env
+backend/.DS_Store
+
+# Logfiles
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+# Angular / Frontend
+
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+frontend/.env
+frontend/.DS_Store
+
+# Editor und IDE-Dateien
+.vscode/
+*.sublime-workspace
+*.sublime-project
+.idea/
+*.swp
+*.bak
+*.tmp
+
+# Systemdateien
+.DS_Store
+Thumbs.db
+
+# Testing und Coverage
+coverage/
+frontend/coverage/
+backend/coverage/
+
+# Sonstiges 
+.env
+*.local
+.history/

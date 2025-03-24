@@ -1,0 +1,17 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40; /* Dunkelgrau */
+    color: white;
+    padding: 10px 0;
+  }
+  
+  .footer a {
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    color: #ff9800; /* Orange Hover-Effekt */
+  }
+  
