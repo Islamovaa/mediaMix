@@ -35,7 +35,7 @@ cd
 - starte mit **npm start** das Backend
 - bei erfolreicher Verbindung: **Server läuft auf http://localhost:5000
 Erfolgreich mit der Datenbank mediaMix verbunden**
-stelle sicher, dass die .env gefüllt ist, um automatisch die Daten für die Datenbank zu erhalten
+-stelle sicher, dass die .env gefüllt ist, um automatisch die Daten für die Datenbank zu erhalten
 
 - ### Frontend
 - cd Frontend
@@ -44,7 +44,7 @@ stelle sicher, dass die .env gefüllt ist, um automatisch die Daten für die Dat
 - starte mit **ng serve** das Frontend
 - -bei erfolgreicher Verbindung **Compiled successfully.**
 
-  ##Screenshots
+  ## Screenshots
   Im weiteren sind Screenshots gegeben, die die Nutzung der Webseite und ihrer Funktionen darstellt.
   
   Der Blick auf die Webseite zeigt auf einen Blick die Hauptfunktionen. Links kann man alle Kategorien sehen und nach diesen filtern. Es werden dann entsprechnend nur die Medien gezigt, die gewünscht sind. Die einzelnen Medien werden in Karten dargestellt. Die karten sind farblich nach den Kategorien unterschieden. Die Steuerfunktionen "Zufallsgenerator" und "Neues Medium hinzufügen" sind ebenfalls zu sehen. 
