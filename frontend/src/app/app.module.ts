@@ -7,7 +7,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 
 @NgModule({
@@ -19,7 +18,6 @@ import { HomeComponent } from './home/home.component';
     AppRoutingModule,
     HeaderComponent, 
     FooterComponent,
-    NavbarComponent, 
     HomeComponent,
     HttpClientModule,  
   ],

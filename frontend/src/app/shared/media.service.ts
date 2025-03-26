@@ -25,4 +25,21 @@ export class MediaService {
   createMedia(medium: Media): Observable<Media> {
     return this.http.post<Media>(this.apiUrl, medium);
   }
-}
+
+  deleteMedia(id: string): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/${id}`);
+  }
+
+  updateMedia(id: string, medium: any): Observable<any> {
+    return this.http.put(`${this.apiUrl}/${id}`, medium);
+  }
+
+
+  updateMedium(id: string, updatedData: any) {
+    const url = `http://localhost:5000/media/${id}`;
+    console.log('API-URL (sollte ohne Doppel-media sein):', url);
+    return this.http.patch<any>(url, updatedData);
+  }
+  
+  
+}  
