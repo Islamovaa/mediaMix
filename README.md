@@ -10,7 +10,7 @@
 - Bewertungssystem: numerische Bewertung von 1-5, sowie optionaler Kommentar – nur bei abgeschlossenem Status sichtbar
 - Zufallsgenerator: Gib eine Kategorie (z. B. „Buch“) ein, und dir wird ein zufälliges Medium daraus vorgeschlagen
 - Bearbeiten & Löschen von Medien
-- Medien sind nach Kategorien filtbar
+- Medien sind nach Kategorien filterbar
 
 ## Tech Stack
 
