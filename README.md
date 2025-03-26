@@ -47,7 +47,7 @@ Erfolgreich mit der Datenbank mediaMix verbunden**
   ## Screenshots
   Im weiteren sind Screenshots gegeben, die die Nutzung der Webseite und ihrer Funktionen darstellt.
   
-  Der Blick auf die Webseite zeigt auf einen Blick die Hauptfunktionen. Links kann man alle Kategorien sehen und nach diesen filtern. Es werden dann entsprechnend nur die Medien gezigt, die gewünscht sind. Die einzelnen Medien werden in Karten dargestellt. Die karten sind farblich nach den Kategorien unterschieden. Die Steuerfunktionen "Zufallsgenerator" und "Neues Medium hinzufügen" sind ebenfalls zu sehen. 
+  Der Blick auf die Webseite zeigt auf einen Blick die Hauptfunktionen. Links kann man alle Kategorien sehen und nach diesen filtern. Es werden dann entsprechnend nur die Medien gezeigt, die gewünscht sind. Die einzelnen Medien werden in Karten dargestellt. Die Karten sind farblich nach den Kategorien unterschieden. Die Steuerfunktionen "Zufallsgenerator" und "Neues Medium hinzufügen" sind ebenfalls zu sehen. 
   ![image](https://github.com/user-attachments/assets/e71bc0ec-8979-4464-91cb-3bcfe753bbee)
 
 Bei Klick auf Kategorie "Gesellschaftsspiele" werden nur diese ausgegeben. 
@@ -75,5 +75,4 @@ Bei Klich auf den Stift kann der Inhalt der Karte bearbeitet werden. Es öffnet 
 - Erstellung von Daten für die Datenbank
 - Zur Hilfestellung bei Fehlermeldungen
 - unterstützend zur Implementierung, besonders bei der Update-Komponente
-- Rechtschreibkontrolle für die Read-Me
 - Erläuterung bestimmter Programmierlogiken
